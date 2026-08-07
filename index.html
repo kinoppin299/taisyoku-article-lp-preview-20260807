@@ -1,0 +1,1007 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>話題の退職給付金、自分はいくらもらえる？</title>
+  <style>
+    :root {
+      --navy: #06275f;
+      --blue: #0b6fe8;
+      --sky: #e8f6ff;
+      --green: #08b33f;
+      --green-dark: #05742c;
+      --yellow: #ffe457;
+      --coral: #ff6b5f;
+      --ink: #15213a;
+      --muted: #667085;
+      --line: #d7e7f7;
+      --paper: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      background: #dcefff;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif;
+      line-height: 1.85;
+      background:
+        linear-gradient(90deg, rgba(11, 111, 232, .08), transparent 24%, transparent 76%, rgba(8, 179, 63, .08)),
+        #eef8ff;
+      padding-bottom: 86px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    a { color: inherit; }
+
+    .page {
+      width: 100%;
+      max-width: 440px;
+      margin: 0 auto;
+      background: var(--paper);
+      box-shadow: 0 0 34px rgba(8, 60, 120, .16);
+      overflow: hidden;
+    }
+
+    .pr-header {
+      display: flex;
+      justify-content: flex-end;
+      padding: 8px 12px 6px;
+      font-size: 10px;
+      line-height: 1;
+      color: #5e6b82;
+      background: #fff;
+    }
+
+    .hero {
+      padding: 0 12px 12px;
+      background: linear-gradient(180deg, #ffffff 0%, #eef8ff 100%);
+    }
+
+    .hero img {
+      border-radius: 0 0 14px 14px;
+      box-shadow: 0 10px 22px rgba(6, 39, 95, .16);
+    }
+
+    .note {
+      margin: 8px 4px 0;
+      font-size: 10.5px;
+      line-height: 1.55;
+      color: #667085;
+    }
+
+    .section {
+      padding: 26px 18px;
+      position: relative;
+    }
+
+    .section.blue {
+      background: linear-gradient(180deg, #f4fbff 0%, #ffffff 100%);
+    }
+
+    .section.pop {
+      background:
+        linear-gradient(135deg, rgba(255, 228, 87, .28), transparent 40%),
+        linear-gradient(180deg, #ffffff 0%, #eff9ff 100%);
+    }
+
+    .lead {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.65;
+    }
+
+    h1, h2, h3, p { margin: 0; }
+
+    h2 {
+      margin-bottom: 14px;
+      color: var(--navy);
+      font-size: 25px;
+      line-height: 1.34;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 18px 0 10px;
+      color: var(--navy);
+      font-size: 19px;
+      line-height: 1.45;
+      font-weight: 700;
+    }
+
+    b, strong {
+      font-weight: 700;
+    }
+
+    p + p { margin-top: 14px; }
+
+    .marker {
+      background: linear-gradient(transparent 58%, var(--yellow) 0);
+      font-weight: 700;
+    }
+
+    .hot {
+      color: var(--coral);
+      font-weight: 700;
+    }
+
+    .visual {
+      margin: 18px -6px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 12px 24px rgba(6, 39, 95, .12);
+    }
+
+    .money-visual {
+      border: 3px solid var(--yellow);
+      box-shadow: 0 10px 0 #ffeaa0, 0 18px 28px rgba(255, 107, 95, .16);
+    }
+
+    .lp-line-cta {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 4px 10px;
+      align-items: center;
+      width: 100%;
+      margin: 18px auto 8px;
+      padding: 14px 18px 16px;
+      border-radius: 15px;
+      color: #fff;
+      text-decoration: none;
+      background: linear-gradient(180deg, #2be85a 0%, #07aa3b 100%);
+      box-shadow: 0 8px 0 var(--green-dark), 0 16px 24px rgba(0, 91, 32, .24);
+      animation: ctaPulse 1.8s ease-in-out infinite;
+    }
+
+    .lp-line-cta__sub {
+      grid-column: 1 / -1;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.2;
+      color: #eaffef;
+    }
+
+    .lp-line-cta__main {
+      font-size: clamp(22px, 6.4vw, 32px);
+      font-weight: 700;
+      line-height: 1.08;
+      text-shadow: 0 2px 0 rgba(0,0,0,.14);
+    }
+
+    .lp-line-cta__arrow {
+      font-size: 40px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    @keyframes ctaPulse {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(3px) scale(.985); box-shadow: 0 5px 0 var(--green-dark), 0 10px 18px rgba(0, 91, 32, .2); }
+    }
+
+    .speech {
+      position: relative;
+      margin: 18px 0;
+      padding: 16px;
+      border: 3px solid var(--navy);
+      border-radius: 16px;
+      background: #fff;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.55;
+      box-shadow: 7px 7px 0 var(--yellow);
+    }
+
+    .speech:after {
+      content: "";
+      position: absolute;
+      left: 28px;
+      bottom: -16px;
+      width: 22px;
+      height: 22px;
+      background: #fff;
+      border-right: 3px solid var(--navy);
+      border-bottom: 3px solid var(--navy);
+      transform: rotate(45deg);
+    }
+
+    .knowledge-check {
+      margin: 16px 12px 26px;
+      padding: 16px;
+      border-radius: 16px;
+      background:
+        radial-gradient(circle at 95% 0%, rgba(255, 228, 87, .44), transparent 30%),
+        linear-gradient(180deg, #ffffff 0%, #f0f9ff 100%);
+      border: 3px solid var(--yellow);
+      box-shadow: 0 8px 0 #ffeaa0, 0 14px 24px rgba(6, 39, 95, .13);
+    }
+
+    .knowledge-check__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      padding: 3px 10px;
+      border-radius: 999px;
+      color: #fff;
+      background: var(--coral);
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .knowledge-check h2 {
+      margin: 10px 0 8px;
+      font-size: 23px;
+      line-height: 1.35;
+    }
+
+    .knowledge-check__text {
+      margin: 0 0 12px;
+      color: #344054;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .knowledge-check__answers {
+      display: grid;
+      gap: 9px;
+    }
+
+    .knowledge-check__answer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 11px 14px;
+      border-radius: 12px;
+      color: var(--navy);
+      background: #fff;
+      border: 2px solid #cfe1f5;
+      box-shadow: 0 4px 0 #e2effb;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .knowledge-check__answer.primary {
+      color: #fff;
+      background: linear-gradient(180deg, #2be85a 0%, #07aa3b 100%);
+      border-color: var(--green-dark);
+      box-shadow: 0 5px 0 var(--green-dark);
+    }
+
+    .knowledge-check__answer span {
+      color: inherit;
+      font-size: 24px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .money-list {
+      display: grid;
+      gap: 9px;
+      margin: 18px 0;
+    }
+
+    .money-list div {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 10px;
+      align-items: center;
+      padding: 10px 12px;
+      border: 2px solid #d9e9fa;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0 5px 0 #e4f0fb;
+    }
+
+    .money-list b {
+      color: var(--navy);
+      font-size: 18px;
+    }
+
+    .money-list span {
+      font-weight: 900;
+      color: var(--coral);
+      font-size: 20px;
+      line-height: 1.2;
+    }
+
+    .check-card {
+      margin: 16px 0;
+      padding: 16px;
+      border-radius: 14px;
+      background: #fff;
+      border: 2px solid var(--line);
+    }
+
+    .check-card li {
+      list-style: none;
+      margin: 10px 0;
+      padding-left: 34px;
+      position: relative;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .check-card li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: -1px;
+      display: grid;
+      place-items: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      color: #fff;
+      background: var(--blue);
+      font-weight: 900;
+    }
+
+    .case-grid {
+      display: grid;
+      gap: 12px;
+      margin: 18px 0;
+    }
+
+    .case-mini {
+      position: relative;
+      display: grid;
+      grid-template-columns: 104px 1fr;
+      gap: 12px;
+      align-items: center;
+      padding: 12px 12px 12px 18px;
+      border-radius: 14px;
+      background: #fff;
+      border: 2px solid #d9e9fa;
+      box-shadow: 0 8px 0 #e9f5ff;
+      overflow: hidden;
+    }
+
+    .case-mini:before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 7px;
+      background: var(--coral);
+    }
+
+    .case-mini b {
+      display: block;
+      color: var(--navy);
+      font-size: 15px;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+
+    .case-mini strong {
+      display: block;
+      margin-top: 4px;
+      color: var(--coral);
+      font-size: 29px;
+      line-height: 1.1;
+      font-weight: 800;
+    }
+
+    .case-mini img {
+      width: 104px;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 5px 12px rgba(6, 39, 95, .16);
+    }
+
+    .arrow-down {
+      width: 0;
+      height: 0;
+      margin: 10px auto -4px;
+      border-left: 44px solid transparent;
+      border-right: 44px solid transparent;
+      border-top: 48px solid var(--yellow);
+      filter: drop-shadow(0 8px 0 rgba(6, 39, 95, .16));
+      animation: arrowBounce 1.3s ease-in-out infinite;
+    }
+
+    @keyframes arrowBounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
+
+    .diagnosis {
+      margin: 14px -4px 18px;
+      padding: 16px;
+      border-radius: 20px;
+      background:
+        radial-gradient(circle at 18% 8%, rgba(255, 228, 87, .6), transparent 26%),
+        linear-gradient(180deg, #0b6fe8 0%, #063881 100%);
+      border: 4px solid var(--yellow);
+      box-shadow: 0 12px 0 #0a2c68, 0 18px 34px rgba(6, 39, 95, .22);
+    }
+
+    .diagnosis-hero {
+      margin: -8px -8px 14px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 12px 24px rgba(6, 39, 95, .18);
+      animation: titleFloat 1.6s ease-in-out infinite;
+    }
+
+    @keyframes titleFloat {
+      0%, 100% { transform: translateY(0); filter: brightness(1); }
+      50% { transform: translateY(-4px); filter: brightness(1.08); }
+    }
+
+    .question {
+      display: none;
+    }
+
+    .question.active {
+      display: block;
+    }
+
+    .question h3 {
+      margin-top: 4px;
+      font-size: 20px;
+      color: #fff;
+    }
+
+    .answers {
+      display: grid;
+      gap: 9px;
+      margin-top: 12px;
+    }
+
+    .answers button {
+      appearance: none;
+      width: 100%;
+      min-height: 54px;
+      padding: 11px 14px;
+      border: 2px solid #cfe1f5;
+      border-radius: 12px;
+      background: #fff;
+      color: var(--navy);
+      font: inherit;
+      font-size: 17px;
+      font-weight: 700;
+      text-align: left;
+      box-shadow: 0 4px 0 #e2effb;
+    }
+
+    .answers button.selected {
+      color: #fff;
+      border-color: var(--green-dark);
+      background: var(--green);
+      box-shadow: 0 4px 0 var(--green-dark);
+    }
+
+    .diagnosis-result {
+      display: none;
+      margin-top: 14px;
+      padding: 16px;
+      border-radius: 14px;
+      background: #fff;
+      border: 3px solid var(--yellow);
+      text-align: center;
+    }
+
+    .diagnosis-result.show {
+      display: block;
+    }
+
+    .diagnosis-result b {
+      display: block;
+      color: var(--coral);
+      font-size: 25px;
+      line-height: 1.25;
+      font-weight: 800;
+    }
+
+    .flow {
+      display: grid;
+      gap: 10px;
+      counter-reset: flow;
+      margin-top: 16px;
+    }
+
+    .flow div {
+      counter-increment: flow;
+      display: grid;
+      grid-template-columns: 40px 1fr;
+      gap: 10px;
+      align-items: center;
+      padding: 12px;
+      border-radius: 12px;
+      background: #fff;
+      border: 2px solid #d9e9fa;
+      font-weight: 700;
+    }
+
+    .flow div:before {
+      content: counter(flow);
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: #fff;
+      font-size: 18px;
+      font-weight: 900;
+    }
+
+    .voice {
+      margin: 16px 0;
+      padding: 0 0 16px;
+      border-radius: 14px;
+      background: #fff;
+      border-left: 7px solid var(--blue);
+      box-shadow: 0 8px 20px rgba(6, 39, 95, .1);
+      overflow: hidden;
+    }
+
+    .voice img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      margin-bottom: 12px;
+    }
+
+    .voice b,
+    .voice strong,
+    .voice p {
+      display: block;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    .voice b {
+      color: var(--navy);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .voice strong {
+      color: var(--coral);
+      font-size: 22px;
+      line-height: 1.25;
+      font-weight: 800;
+    }
+
+    .faq details {
+      margin: 10px 0;
+      border: 2px solid #d9e9fa;
+      border-radius: 12px;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .faq summary {
+      cursor: pointer;
+      padding: 13px 14px;
+      color: var(--navy);
+      font-weight: 900;
+      line-height: 1.45;
+    }
+
+    .faq details p {
+      padding: 0 14px 14px;
+      color: #344054;
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    .legal-footer {
+      padding: 22px 18px 30px;
+      background: #f4f7fb;
+      color: #667085;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .legal-footer a {
+      color: var(--navy);
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    .sticky-cta {
+      position: fixed;
+      left: 50%;
+      bottom: max(10px, env(safe-area-inset-bottom));
+      z-index: 20;
+      width: min(420px, calc(100vw - 18px));
+      opacity: 0;
+      pointer-events: none;
+      transform: translate(-50%, 18px);
+      transition: opacity .22s ease, transform .22s ease;
+    }
+
+    .sticky-cta.show {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translate(-50%, 0);
+    }
+
+    .sticky-cta .lp-line-cta {
+      margin: 0;
+      padding: 10px 15px 12px;
+      border-radius: 14px;
+    }
+
+    .sticky-cta .lp-line-cta__sub {
+      font-size: 11px;
+    }
+
+    .sticky-cta .lp-line-cta__main {
+      font-size: 22px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .lp-line-cta,
+      .arrow-down,
+      .diagnosis-hero {
+        animation: none;
+      }
+    }
+
+    @media (max-width: 440px) {
+      .page {
+        max-width: none;
+        box-shadow: none;
+      }
+
+      .section {
+        padding-left: 17px;
+        padding-right: 17px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="pr-header">PR: 株式会社founce</div>
+
+    <section class="hero">
+      <img src="images/taisyoku_fv_square_v2.webp" alt="自己都合退職でも確認OK 最大400万円のケースも 話題の退職給付金、自分はいくらもらえる？ 30秒で無料診断">
+      <p class="note">※1 月給30万円で失業手当＋傷病手当サポートご契約のお客様の平均額。</p>
+      <p class="note">※「退職給付金」とは、雇用保険の失業手当、健康保険の傷病手当金、再就職支援手当などの総称です。</p>
+    </section>
+
+    <section class="knowledge-check" aria-label="退職給付金の認知確認">
+      <p class="knowledge-check__eyebrow">まず1問だけ</p>
+      <h2>退職給付金の存在を<br>知っていましたか？</h2>
+      <p class="knowledge-check__text">知っている方は、このまま自分の目安を確認できます。</p>
+      <div class="knowledge-check__answers">
+        <a class="knowledge-check__answer primary" href="#diagnosis">知っているので診断へ進む <span>›</span></a>
+        <a class="knowledge-check__answer" href="#article-start">聞いたことはある <span>›</span></a>
+        <a class="knowledge-check__answer" href="#article-start">知らなかった <span>›</span></a>
+      </div>
+    </section>
+
+    <section class="section" id="article-start">
+      <div class="visual">
+        <img src="images/taisyoku_empathy_4x3.webp" alt="もう限界。でも辞めた後のお金が怖い">
+      </div>
+      <h2>辞めたいのに、<br>お金が怖くて動けない</h2>
+      <p>朝、会社に行く準備をしているだけで胸が重い。</p>
+      <p>「もう辞めたい」と思っているのに、次に浮かぶのはいつも<span class="marker">家賃・食費・次の仕事</span>のこと。</p>
+      <p>でも、退職後の生活を支えるお金を受け取れる可能性があるなら、今の我慢を続けるかどうか、少し見え方が変わるかもしれません。</p>
+    </section>
+
+    <div class="arrow-down"></div>
+
+    <section class="section blue">
+      <div class="visual">
+        <img src="images/taisyoku_not_only_retirement_pay_4x3.webp" alt="退職後のお金は退職金だけじゃない">
+      </div>
+      <h2>退職後のお金は<br>「退職金」だけではありません</h2>
+      <p>多くの人が、退職後にもらえるお金と聞くと、会社から出る退職金を思い浮かべます。</p>
+      <p>でも確認したいのは、それだけではありません。</p>
+      <p>健康保険や雇用保険には、退職後の生活を支えるための給付制度があります。</p>
+      <div class="speech">大事なのは、制度名を覚えることではなく<br><span class="marker">自分の条件でどのくらい見込めるのか</span>を見ることです。</div>
+    </section>
+
+    <section class="section pop">
+      <div class="visual">
+        <img src="images/taisyoku_checklist_4x3.webp" alt="まずはここをチェック 社会保険に12ヶ月以上 現在の会社に在籍中 公務員ではない">
+      </div>
+      <h2>まず、ここに<br>当てはまるか確認</h2>
+      <ul class="check-card">
+        <li>社会保険に12ヶ月以上加入している</li>
+        <li>現在の会社に在籍中</li>
+        <li>公務員ではない</li>
+        <li>障害者手帳を持っていない</li>
+      </ul>
+      <p>ひとつでも気になるなら、先に<span class="marker">自分の条件で見ておく</span>方が早いです。</p>
+      <p class="note">※健康保険・雇用保険に1年以上加入している方は、給付を受け取れる可能性があります。受給可否は個別審査により異なります。</p>
+    </section>
+
+    <section class="section">
+      <h2>最大400万円のケースも。<br>では、自分はいくら？</h2>
+      <div class="visual money-visual">
+        <img src="images/taisyoku_max400_bankbook_woman_4x3.webp" alt="退職給付金 最大400万円のケースも">
+      </div>
+      <p>ここで気になるのは、「そんなにもらえる人がいるなら、<span class="hot">自分はどうなの？</span>」ということだと思います。</p>
+      <p>同じ「会社を辞めたい」という悩みでも、月給、加入期間、退職前の状況によって確認すべき制度や準備が変わります。</p>
+      <p>だからまずは、平均や最大額ではなく、<span class="marker">今の自分の条件でどのくらい見込めるのか</span>をチェックしてみてください。</p>
+      <p class="note">※1 月給30万円で失業手当＋傷病手当サポートご契約のお客様の平均額。</p>
+      <p class="note">※受給額・受給期間は加入期間・退職理由・所得水準・地域等により個人差があり、すべての方に受給が保証されるわけではありません。</p>
+    </section>
+
+    <section class="section blue">
+      <h2>実際に、こんな金額に<br>なった方もいます</h2>
+      <div class="case-grid">
+        <div class="case-mini">
+          <img src="images/taisyoku_case_30s_person_4x3.webp" alt="30代前半の相談者イメージ">
+          <div>
+            <b>30代前半 O.Kさん</b>
+            <strong>380万円 / 18ヶ月</strong>
+          </div>
+        </div>
+        <div class="case-mini">
+          <img src="images/taisyoku_case_40s_person_v2_4x3.webp" alt="40代前半の相談者イメージ">
+          <div>
+            <b>40代前半 M.Yさん</b>
+            <strong>450万円 / 20ヶ月</strong>
+          </div>
+        </div>
+        <div class="case-mini">
+          <img src="images/taisyoku_case_50s_person_4x3.webp" alt="50代前半の相談者イメージ">
+          <div>
+            <b>50代前半 T.Nさん</b>
+            <strong>580万円 / 24ヶ月</strong>
+          </div>
+        </div>
+      </div>
+      <p>会社を辞めたい理由も、収入も、保険の加入状況も人によって違います。</p>
+      <p>だからこそ、「自分だったらどのくらいになるのか」を先に見ておく価値があります。</p>
+      <p class="note">※過去にご相談いただいた一例であり、個人の感想です。受給金額・期間を保証するものではありません。人物画像はイメージです。</p>
+    </section>
+
+    <div class="arrow-down"></div>
+
+    <section class="section pop" id="diagnosis">
+      <h2>あなたはいくら<br>受け取れる可能性がある？</h2>
+      <p>ここで、かんたんな診断シミュレーションを用意しました。</p>
+      <p>入力は選ぶだけ。まずは相談するかどうかを決める前に、自分の目安だけ見てください。</p>
+
+      <div class="diagnosis" aria-live="polite">
+        <div class="diagnosis-hero">
+          <img src="images/taisyoku_simulator_title_4x3.webp" alt="30秒で入力完了 あなたの退職給付金シミュレーター 無料 匿名 退職前でもOK 下の質問に答えるだけ">
+        </div>
+
+        <div class="question active" data-step="1">
+          <h3>年齢を教えてください</h3>
+          <div class="answers">
+            <button type="button">29歳以下</button>
+            <button type="button">30代</button>
+            <button type="button">40代</button>
+            <button type="button">50歳以上</button>
+          </div>
+        </div>
+
+        <div class="question" data-step="2">
+          <h3>雇用形態を教えてください</h3>
+          <div class="answers">
+            <button type="button">正社員</button>
+            <button type="button">契約社員</button>
+            <button type="button">派遣社員</button>
+            <button type="button">その他</button>
+          </div>
+        </div>
+
+        <div class="question" data-step="3">
+          <h3>加入している保険を教えてください</h3>
+          <div class="answers">
+            <button type="button">社会保険に加入している</button>
+            <button type="button">雇用保険に加入している</button>
+            <button type="button">両方に加入している</button>
+            <button type="button">わからない</button>
+          </div>
+        </div>
+
+        <div class="question" data-step="4">
+          <h3>月間の給与額を教えてください</h3>
+          <div class="answers">
+            <button type="button">14万円以下</button>
+            <button type="button">15〜30万円</button>
+            <button type="button">30〜40万円</button>
+            <button type="button">40万円以上</button>
+          </div>
+        </div>
+
+        <div class="question" data-step="5">
+          <h3>退職予定はいつ頃ですか？</h3>
+          <div class="answers">
+            <button type="button">1ヶ月以内</button>
+            <button type="button">3ヶ月以内</button>
+            <button type="button">まだ決めていない</button>
+            <button type="button">すでに退職している</button>
+          </div>
+        </div>
+
+        <div class="question" data-step="6">
+          <h3>最近の状態に近いものはありますか？</h3>
+          <div class="answers">
+            <button type="button">出勤前に気分が重い</button>
+            <button type="button">人間関係やパワハラがつらい</button>
+            <button type="button">眠れない、食欲がない、涙が出る</button>
+            <button type="button">特に当てはまらない</button>
+          </div>
+        </div>
+
+        <div class="diagnosis-result" id="diagnosisResult">
+          <b>目安を確認できます</b>
+          <p>LINEで無料確認すると、自分の場合に必要な準備を確認できます。</p>
+          <a class="lp-line-cta" href="#diagnosis" data-final-href="{LINE_URL}?sb_tracking=true">
+            <span class="lp-line-cta__sub">無料・匿名・30秒</span>
+            <span class="lp-line-cta__main">LINEで目安を確認</span>
+            <span class="lp-line-cta__arrow">›</span>
+          </a>
+          <p class="note">※本診断は一般的な目安です。正確な金額や受給可否は、加入状況・退職理由・医師の診断書などによって異なります。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="visual">
+        <img src="images/taisyoku_why_now_4x3.webp" alt="退職前に確認したい3つ 申請タイミング 必要書類 会社証明">
+      </div>
+      <h2>退職前に確認したい理由</h2>
+      <p>退職給付金は、「辞めたあとに調べればいい」で済まないことがあります。</p>
+      <p>なぜなら、申請タイミング、必要書類、会社証明など、<span class="marker">退職前に確認したいこと</span>が出てくる場合があるからです。</p>
+      <div class="flow">
+        <div>いつ申請するかで、進め方が変わる場合があります。</div>
+        <div>あとから集めようとして、時間がかかることがあります。</div>
+        <div>傷病手当金の申請には、事業主の証明が必要となります。</div>
+      </div>
+      <p class="note">※傷病手当金の申請には事業主（会社）の証明が必要となります。手続きの詳細はLINE相談時に個別にご案内いたします。</p>
+      <a class="lp-line-cta" href="#diagnosis" data-final-href="{LINE_URL}?sb_tracking=true">
+        <span class="lp-line-cta__sub">退職前に受給額をチェック</span>
+        <span class="lp-line-cta__main">LINEで今すぐ無料診断</span>
+        <span class="lp-line-cta__arrow">›</span>
+      </a>
+    </section>
+
+    <section class="section blue">
+      <h2>自分で調べるのが<br>難しい理由</h2>
+      <p>退職後のお金について調べると、失業手当、傷病手当金、再就職手当、会社の証明、診断書、退職理由など、似たような言葉が一気に出てきます。</p>
+      <p>ネットで調べても、「結局、自分の場合はどうなの？」で止まってしまいやすいところです。</p>
+      <p>ひとりで制度を読み解く前に、まずは<span class="marker">自分の条件を整理する</span>。</p>
+      <p>そのための入口が、今回の無料診断です。</p>
+    </section>
+
+    <section class="section pop">
+      <h2>LINE診断後の流れ</h2>
+      <div class="flow">
+        <div>年齢、雇用形態、保険加入状況、月給などを選びます。</div>
+        <div>無料オンライン面談で、今の状況や不安を確認します。</div>
+        <div>必要書類や確認事項を整理します。</div>
+        <div>専用LINEグループで進め方を確認します。</div>
+        <div>受給開始。最短1ヶ月のケースもあります。</div>
+      </div>
+      <p class="note">※本ページに記載の受給額・受給期間等の数値は、2024年1月〜6月における当社サポート契約者の集計データに基づく実績例であり、すべての方に同等の結果を保証するものではありません。</p>
+    </section>
+
+    <section class="section">
+      <h2>過去にご相談いただいた方の声</h2>
+      <div class="voice">
+        <img src="images/taisyoku_case_40s_person_v2_4x3.webp" alt="40代前半の相談者イメージ">
+        <b>M.Yさん 40代前半</b>
+        <strong>450万円 / 20ヶ月</strong>
+        <p>収入がなくなるのが不安で辞められず、退職給付金を受け取りながら会社を辞める選択肢を知りました。</p>
+      </div>
+      <div class="voice">
+        <img src="images/taisyoku_case_30s_person_4x3.webp" alt="30代前半の相談者イメージ">
+        <b>O.Kさん 30代前半</b>
+        <strong>380万円 / 18ヶ月</strong>
+        <p>今は受給金額で生活を支えながら、システムエンジニアになるために勉強しています。</p>
+      </div>
+      <div class="voice">
+        <img src="images/taisyoku_case_50s_person_4x3.webp" alt="50代前半の相談者イメージ">
+        <b>T.Nさん 50代前半</b>
+        <strong>580万円 / 24ヶ月</strong>
+        <p>生活を考えると無理して働く必要があると思っていた時に、退職後の支援金制度を知りました。</p>
+      </div>
+      <p class="note">※過去にご相談いただいた一例です。個人の感想であり、受給額を保証するものではありません。人物画像はイメージです。</p>
+    </section>
+
+    <section class="section blue faq">
+      <h2>よくある質問</h2>
+      <details open>
+        <summary>まだ退職するか決めていません。それでも診断できますか？</summary>
+        <p>できます。退職前に確認しておくことで、必要書類や申請タイミングを先に把握できます。</p>
+      </details>
+      <details>
+        <summary>会社に知られますか？</summary>
+        <p>まずはLINE診断と無料面談で状況を確認します。必要な手続きや会社証明については、個別の状況に合わせて案内します。</p>
+      </details>
+      <details>
+        <summary>対象外だったらどうなりますか？</summary>
+        <p>対象可能性が低い場合でも、今後確認すべきことを整理できます。まずは無料診断で目安を確認してください。</p>
+      </details>
+      <details>
+        <summary>診断では何を聞かれますか？</summary>
+        <p>年齢、雇用形態、保険加入状況、月給、退職予定時期、最近の状態などです。</p>
+      </details>
+    </section>
+
+    <section class="section pop">
+      <h2>辞める前に、まずは<br>受け取れる可能性だけ確認</h2>
+      <p>退職するかどうかを、今ここで決める必要はありません。</p>
+      <p>でも、退職後にもらえる可能性があるお金を知らないまま、限界の仕事を続ける必要もありません。</p>
+      <p><span class="marker">まずは30秒。</span> 自分はいくら受け取れる可能性があるのか、そこだけ先に見ておいてください。</p>
+      <a class="lp-line-cta" href="#diagnosis" data-final-href="{LINE_URL}?sb_tracking=true">
+        <span class="lp-line-cta__sub">無料・匿名・退職前でも確認OK</span>
+        <span class="lp-line-cta__main">LINEで無料診断する</span>
+        <span class="lp-line-cta__arrow">›</span>
+      </a>
+    </section>
+
+    <section class="legal-footer">
+      <a href="https://taisyoku-advisor.com/privacy/#transactions" target="_blank" rel="noopener">特定商取引法に基づく表記</a>
+    </section>
+  </main>
+
+  <div class="sticky-cta">
+    <a class="lp-line-cta" href="#diagnosis">
+      <span class="lp-line-cta__sub">自己都合退職でも確認OK</span>
+      <span class="lp-line-cta__main">30秒で無料診断</span>
+      <span class="lp-line-cta__arrow">›</span>
+    </a>
+  </div>
+
+  <script>
+    (() => {
+      const questions = Array.from(document.querySelectorAll('.question'));
+      const result = document.getElementById('diagnosisResult');
+      const sticky = document.querySelector('.sticky-cta');
+      let step = 0;
+
+      function render() {
+        questions.forEach((q, i) => q.classList.toggle('active', i === step));
+      }
+
+      document.querySelectorAll('.answers button').forEach((button) => {
+        button.addEventListener('click', () => {
+          button.parentElement.querySelectorAll('button').forEach((item) => item.classList.remove('selected'));
+          button.classList.add('selected');
+          window.setTimeout(() => {
+            questions[step].classList.remove('active');
+            step += 1;
+            if (step >= questions.length) {
+              result.classList.add('show');
+              result.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              return;
+            }
+            render();
+          }, 220);
+        });
+      });
+
+      window.addEventListener('scroll', () => {
+        sticky.classList.toggle('show', window.scrollY > 760);
+      }, { passive: true });
+
+      render();
+    })();
+  </script>
+</body>
+</html>
