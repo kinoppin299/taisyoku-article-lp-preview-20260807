@@ -49,7 +49,7 @@
     .client-cta-link {
       display: block;
       text-decoration: none;
-      animation: ctaPulse 1.35s ease-in-out infinite;
+      animation: ctaBound 1.15s ease-in-out infinite;
       filter: drop-shadow(0 6px 8px rgba(0, 96, 38, .22));
       cursor: default;
     }
@@ -58,76 +58,6 @@
       width: 100%;
       height: auto;
       border: 0;
-    }
-    .html-cta-button {
-      position: relative;
-      display: grid;
-      grid-template-columns: auto 1fr auto;
-      align-items: center;
-      gap: 9px;
-      min-height: 64px;
-      padding: 11px 11px 12px;
-      color: #fff;
-      background: linear-gradient(180deg, #14c962 0%, #08a94d 58%, #069543 100%);
-      border: 2px solid #047236;
-      border-radius: 8px;
-      box-shadow: inset 0 2px 0 rgba(255, 255, 255, .32), 0 6px 0 #046b33, 0 11px 18px rgba(6, 115, 56, .24);
-      text-decoration: none;
-      overflow: hidden;
-      animation: ctaPulse 1.35s ease-in-out infinite;
-    }
-    .html-cta-button::before {
-      content: "";
-      position: absolute;
-      top: -40%;
-      left: -38%;
-      width: 34%;
-      height: 180%;
-      background: rgba(255, 255, 255, .46);
-      transform: rotate(22deg);
-      animation: ctaShine 2.4s ease-in-out infinite;
-    }
-    .html-cta-badge {
-      position: relative;
-      z-index: 1;
-      display: inline-grid;
-      place-items: center;
-      min-width: 48px;
-      min-height: 34px;
-      padding: 5px 7px;
-      color: #06361c;
-      background: #fff23d;
-      border: 2px solid #fff;
-      border-radius: 7px;
-      box-shadow: 0 2px 0 rgba(3, 73, 35, .22);
-      font-size: 14px;
-      line-height: 1;
-      font-weight: 950;
-    }
-    .html-cta-main {
-      position: relative;
-      z-index: 1;
-      text-align: left;
-      font-size: 21px;
-      line-height: 1.18;
-      font-weight: 950;
-      letter-spacing: 0;
-      word-break: keep-all;
-    }
-    .html-cta-arrow {
-      position: relative;
-      z-index: 1;
-      display: inline-grid;
-      place-items: center;
-      width: 32px;
-      height: 32px;
-      color: #079846;
-      background: #fff;
-      border-radius: 50%;
-      font-size: 28px;
-      line-height: 1;
-      font-weight: 900;
-      box-shadow: inset 0 -2px 0 rgba(0, 0, 0, .12);
     }
     .html-cta-sub {
       margin-top: 8px;
@@ -320,9 +250,11 @@
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(7px); }
     }
-    @keyframes ctaPulse {
-      0%, 100% { transform: translateY(0) scale(1); }
-      50% { transform: translateY(2px) scale(.985); }
+    @keyframes ctaBound {
+      0%, 100% { transform: translateY(0); }
+      48% { transform: translateY(-8px); }
+      62% { transform: translateY(2px); }
+      76% { transform: translateY(-3px); }
     }
     @keyframes ctaShine {
       0% { left: -42%; opacity: 0; }
@@ -350,7 +282,6 @@
     @media (prefers-reduced-motion: reduce) {
       .widget-arrow b { animation: none; }
       .client-cta-link { animation: none; }
-      .html-cta-button, .html-cta-button::before { animation: none; }
     }
   </style>
 </head>
