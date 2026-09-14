@@ -283,27 +283,88 @@
       .widget-arrow b { animation: none; }
       .client-cta-link { animation: none; }
     }
+
+    .annotated-image { position: relative; margin: 0; padding: 0; line-height: 0; }
+    .annotation-mark {
+      position: absolute; z-index: 1; transform: translate(-50%, -50%);
+      color: #171717; font-size: 12px; line-height: 1; font-weight: 700;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif;
+      text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+      pointer-events: none;
+    }
+    .article-annotation {
+      margin: 0; padding: 6px 10px; background: #fff; color: #333;
+      font-size: 10px; line-height: 1.6; font-weight: 400; text-align: left;
+      overflow-wrap: anywhere;
+    }
+    .annotation-in-image {
+      position: absolute; z-index: 1; left: 68.717949%; top: 98.347575%;
+      transform: translate(-50%, -50%); margin: 0; padding: 2px 4px;
+      max-width: calc(100% - 16px); width: max-content;
+      background: rgba(255,255,255,.94); color: #222;
+      font-size: 10px; font-weight: 400; line-height: 1.4;
+    }
+
+    .story-example-note {
+      display: block; margin: 0 0 8px; padding: 0;
+      color: #333; font-size: 10px; font-weight: 400;
+      line-height: 1.5; text-align: right;
+    }
+
+    .image-detail-note {
+      position: absolute; z-index: 2; margin: 0; padding: 0 2px;
+      color: #252525; font-size: 10px; font-weight: 400;
+      line-height: 1.2; text-align: left; overflow-wrap: anywhere;
+    }
+    .proof-period { left: 3%; width: 62%; top: 45.35%; text-align: center; }
+    .proof-amount { line-height: 1.1; left: 2%; right: 2%; top: 68.15%; background: rgba(255,243,247,.96); }
+    .proof-contract { left: 45%; right: 3%; bottom: 7.4%; padding: 2px 4px;
+      background: rgba(246,242,255,.96); border-radius: 2px; }
+    @media (max-width: 350px) {
+      .proof-period, .proof-amount { font-size: 9px; line-height: 1.1; }
+    }
+    .compare-example { left: 3%; right: 3%; bottom: 1.1%; padding: 2px 4px;
+      background: rgba(255,255,255,.94); text-align: center; }
+
+    .proof-amount, .proof-contract, .compare-example {
+      left: auto; width: max-content; text-align: right;
+    }
+    .proof-amount { max-width: 96%; }
+    .proof-contract { max-width: 52%; }
+    .compare-example { max-width: 94%; }
   </style>
 </head>
 <body>
   <main class="page">
     <div class="pr">PR 株式会社founce</div>
     <section>
-      <img class="manga-img ratio-43" src="taisyoku_manga_article_v3_image2_assets/M00_fv_numeric_hook.webp" alt="">
+      <div class="annotated-image">
+        <img class="manga-img ratio-43" src="taisyoku_manga_article_v3_image2_assets/M00_fv_numeric_hook.webp" aria-describedby="note-fv" alt="">
+        <span class="annotation-mark" style="left:91.282051%;top:60.622757%" aria-label="注釈あり">※</span>
+      </div>
+      <p class="article-annotation" id="note-fv">※月収30万円のお客様が傷病手当+失業手当を満額受給した場合の受給額です。</p>
       <img class="manga-img ratio-56" src="taisyoku_manga_article_v3_image2_assets/M01_office_pressure.webp" alt="">
-      <div class="story-note">仕事はもう限界。<br>でも自己都合で辞めたら、<br>失業保険が出るまで生活費が持たないですよね。</div>
+      <div class="story-note"><span class="story-example-note">※過去にご相談いただいた方の一例です</span>仕事はもう限界。<br>でも自己都合で辞めたら、<br>失業保険が出るまで生活費が持たないですよね。</div>
       <img class="manga-img ratio-43" src="taisyoku_manga_article_v3_image2_assets/M02_money_fear.webp" alt="">
       <img class="manga-img ratio-43" src="taisyoku_manga_article_v3_image2_assets/M02b_bank_balance.webp" alt="">
-      <div class="story-note">次を決めてから辞めれば安心かもと思って、<br>深夜に求人を見続けました。<br>でも焦って選んだら、<br>また同じことの繰り返しになる気がして、<br>手が止まりました。</div>
+      <div class="story-note"><span class="story-example-note">※過去にご相談いただいた方の一例です</span>次を決めてから辞めれば安心かもと思って、<br>深夜に求人を見続けました。<br>でも焦って選んだら、<br>また同じことの繰り返しになる気がして、<br>手が止まりました。</div>
       <img class="manga-img ratio-56" src="taisyoku_manga_article_v3_image2_assets/M03_job_search_deadend.webp" alt="">
       <img class="manga-img ratio-43" src="taisyoku_manga_article_v3_image2_assets/M03b_rejection_notice.webp" alt="">
       <img class="manga-img ratio-43" src="taisyoku_manga_article_v3_image2_assets/M04_panic_peak.webp" alt="">
-      <div class="story-note">焦って妥協して次の仕事を選んでも、<br>また同じことの繰り返しになるのが怖かった。<br>そんな時に友人から教えてもらった方法が、<br>目からウロコだったんです。</div>
-      <img class="manga-img ratio-56" src="taisyoku_manga_article_v3_image2_assets/M05_friend_line_trigger.webp" alt="">
+      <div class="story-note"><span class="story-example-note">※過去にご相談いただいた方の一例です</span>焦って妥協して次の仕事を選んでも、<br>また同じことの繰り返しになるのが怖かった。<br>そんな時に友人から教えてもらった方法が、<br>目からウロコだったんです。</div>
+      <div class="annotated-image">
+        <img class="manga-img ratio-56" src="taisyoku_manga_article_v3_image2_assets/M05_friend_line_trigger.webp" aria-describedby="note-benefit" alt="">
+        <span class="annotation-mark" style="left:32.307692%;top:80.740740%" aria-label="注釈あり">※</span>
+        <p class="annotation-in-image" id="note-benefit">※傷病手当、失業手当のことです</p>
+      </div>
       <img class="manga-img ratio-43" src="taisyoku_manga_article_v3_image2_assets/M05b_friend_social_proof.webp" alt="">
       <div class="story-note">自己都合で辞めたら、<br>失業保険はすぐ出ない。<br>私はずっとそう思っていました。<br>だから友人の話を聞いた時、<br>最初は信じられませんでした。</div>
       <img class="manga-img ratio-43" src="taisyoku_manga_article_v3_image2_assets/M06_belief_inversion.webp" alt="">
-      <img class="manga-img ratio-43" src="taisyoku_manga_article_v3_image2_assets/M07_400man_shock.webp" alt="">
+      <div class="annotated-image">
+        <img class="manga-img ratio-43" src="taisyoku_manga_article_v3_image2_assets/M07_400man_shock.webp" aria-describedby="note-amount" alt="">
+        <span class="annotation-mark" style="left:91.282051%;top:47.398771%" aria-label="注釈あり">※</span>
+      </div>
+      <p class="article-annotation" id="note-amount">※月収30万円のお客様が傷病手当+失業手当を満額受給した場合の受給額です。</p>
       <div class="story-note">全員が対象になる話ではない。<br>でも「自分は無理」と決めつけて、<br>何も見ないまま辞めるのも怖い。<br>まずは自分の条件だけ確認したくなりました。</div>
       <img class="manga-img ratio-56" src="taisyoku_manga_article_v3_image2_assets/M08_not_everyone.webp" alt="">
       <img class="manga-img ratio-43" src="taisyoku_manga_article_v3_image2_assets/M09_three_checks.webp" alt="">
@@ -312,9 +373,17 @@
       <div class="story-note">自分で調べても、<br>制度の名前や書類の順番ばかり出てきて混乱しました。<br>そこでスマホで見たのが、<br>退職前アドバイザーでした。</div>
       <img class="manga-img ratio-56" src="taisyoku_manga_article_v3_image2_assets/M12_advisor_intro.webp" alt="">
       <div class="story-note">一番気になったのは、<br>実際にどれくらい受け取れる可能性があるのか。<br>最大400万円という数字を見て、<br>私はようやく<br>「確認だけはした方がいい」と思いました。</div>
-      <img class="manga-img ratio-56" src="taisyoku_manga_article_v3_image2_assets/M13_proof_numbers.webp" alt="">
+      <div class="annotated-image">
+        <img class="manga-img ratio-56" src="taisyoku_manga_article_v3_image2_assets/M13_proof_numbers.webp" aria-describedby="proof-period proof-amount proof-contract" alt="">
+        <p class="image-detail-note proof-period" id="proof-period">※2024年1月〜2026年7月</p>
+        <p class="image-detail-note proof-amount" id="proof-amount">※月収30万円のお客様が傷病手当+失業手当を満額受給した場合の受給額</p>
+        <p class="image-detail-note proof-contract" id="proof-contract">※2024年1月〜2024年6月の<br>失業手当サポート契約顧客</p>
+      </div>
       <img class="manga-img ratio-56" src="taisyoku_manga_article_v3_image2_assets/M13b_strong_number_objection.webp" alt="">
-      <img class="manga-img ratio-43" src="taisyoku_manga_article_v3_image2_assets/M14_amount_compare.webp" alt="">
+      <div class="annotated-image">
+        <img class="manga-img ratio-43" src="taisyoku_manga_article_v3_image2_assets/M14_amount_compare.webp" aria-describedby="compare-example" alt="">
+        <p class="image-detail-note compare-example" id="compare-example">※27歳、月収30万円、傷病手当と失業手当を受け取った場合</p>
+      </div>
       <img class="manga-img ratio-43" src="taisyoku_manga_article_v3_image2_assets/M14b_400man_meaning.webp" alt="">
       <div class="widget-arrow"><span>まずは対象かだけ確認</span><b>↓</b></div>
       <div id="html-cta-CTA01_before_resign" class="html-cta html-cta-CTA01_before_resign">
